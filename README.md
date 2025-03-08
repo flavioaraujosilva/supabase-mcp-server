@@ -9,7 +9,7 @@ Este é um servidor MCP (Model-Controller-Persistence) que fornece uma API RESTf
 - Inserção de dados
 - Atualização de dados
 
-## Configuração
+## Configuração Local
 
 1. Clone o repositório
 2. Instale as dependências:
@@ -21,9 +21,32 @@ Este é um servidor MCP (Model-Controller-Persistence) que fornece uma API RESTf
    cp .env.example .env
    ```
 
-## Uso
+## Deploy na Smithery
 
-Para iniciar o servidor:
+1. Instale a CLI da Smithery:
+   ```bash
+   npm install -g @smithery/cli
+   ```
+
+2. Faça login na sua conta Smithery:
+   ```bash
+   smithery login
+   ```
+
+3. No diretório do projeto, inicialize o deploy:
+   ```bash
+   smithery deploy
+   ```
+
+4. Configure as variáveis de ambiente no painel da Smithery:
+   - `SUPABASE_URL`: URL do seu projeto Supabase
+   - `SUPABASE_KEY`: Chave de API do seu projeto Supabase
+
+5. Seu servidor estará disponível no domínio fornecido pela Smithery após o deploy.
+
+## Uso Local
+
+Para iniciar o servidor localmente:
 ```bash
 npm start
 ```
@@ -72,3 +95,15 @@ curl -X PATCH http://localhost:3000/api/users/123 \
   -H "Content-Type: application/json" \
   -d '{"name": "João Silva"}'
 ```
+
+## Monitoramento na Smithery
+
+Após o deploy, você pode monitorar seu servidor através do painel da Smithery:
+
+1. Acesse o painel da Smithery
+2. Navegue até seu projeto
+3. Visualize:
+   - Logs em tempo real
+   - Métricas de uso
+   - Status do servidor
+   - Variáveis de ambiente
