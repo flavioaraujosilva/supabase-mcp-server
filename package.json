@@ -1,0 +1,15 @@
+{
+  "name": "supabase-mcp-server",
+  "version": "1.0.0",
+  "description": "Servidor MCP do Supabase com funcionalidades de consulta e inserção de dados",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.7",
+    "express": "^4.18.3",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5"
+  }
+}
